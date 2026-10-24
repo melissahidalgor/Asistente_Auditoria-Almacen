@@ -1,0 +1,62 @@
+[
+  {
+    "timestamp": "2026-10-24 10:26:42",
+    "responsable": "Inspector_Anden",
+    "mensaje": "Buenas tardes, quiero iniciar turno",
+    "intencion": "saludo",
+    "evento": null,
+    "detalle": null,
+    "lote": null,
+    "anden": null,
+    "dictamen": null,
+    "en_progreso": false
+  },
+  {
+    "timestamp": "2026-10-24 10:26:42",
+    "responsable": "Inspector_Anden",
+    "mensaje": "Revisando llegada de refacciones en bahía 3",
+    "intencion": "iniciar_auditoria",
+    "evento": "falta_lote",
+    "detalle": null,
+    "lote": null,
+    "anden": 3,
+    "dictamen": null,
+    "en_progreso": false
+  },
+  {
+    "timestamp": "2026-10-24 10:26:42",
+    "responsable": "Inspector_Anden",
+    "mensaje": "lote 710",
+    "intencion": "iniciar_auditoria",
+    "evento": "inicio_auditoria",
+    "detalle": "Lote 710 en Andén 3",
+    "lote": "710",
+    "anden": 3,
+    "dictamen": null,
+    "en_progreso": true
+  },
+  {
+    "timestamp": "2026-10-24 10:26:42",
+    "responsable": "Inspector_Anden",
+    "mensaje": "La caja viene rota de una esquina",
+    "intencion": "reportar_dano_empaque",
+    "evento": "no_conformidad",
+    "detalle": "RECHAZADO_CUARENTENA",
+    "lote": "710",
+    "anden": 3,
+    "dictamen": "RECHAZADO_CUARENTENA",
+    "en_progreso": true
+  },
+  {
+    "timestamp": "2026-10-24 10:26:42",
+    "responsable": "Inspector_Anden",
+    "mensaje": "Es todo por el momento",
+    "intencion": "despedida",
+    "evento": "fin_sesion",
+    "detalle": null,
+    "lote": null,
+    "anden": null,
+    "dictamen": null,
+    "en_progreso": false
+  }
+]
