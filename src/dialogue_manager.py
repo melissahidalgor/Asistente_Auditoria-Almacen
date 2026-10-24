@@ -43,13 +43,15 @@ class DialogueManager:
 
         # Llenado contextual de slots pendientes (slot-filling)
         if self.session.pendiente:
-            numero_aislado = extraer_numero_aislado(mensaje)
-            if numero_aislado is not None:
-                intencion = "iniciar_auditoria"
-                if self.session.pendiente == "lote":
-                    entidades["lote"] = str(numero_aislado)
-                elif self.session.pendiente == "anden":
-                    entidades["anden"] = numero_aislado
+            # Solo si no se detectó ninguna entidad explícita se intenta asignar número aislado
+            if entidades["lote"] is None and entidades["anden"] is None:
+                numero_aislado = extraer_numero_aislado(mensaje)
+                if numero_aislado is not None:
+                    intencion = "iniciar_auditoria"
+                    if self.session.pendiente == "lote":
+                        entidades["lote"] = str(numero_aislado)
+                    elif self.session.pendiente == "anden":
+                        entidades["anden"] = numero_aislado
             elif entidades["lote"] or entidades["anden"] is not None:
                 intencion = "iniciar_auditoria"
 
@@ -88,6 +90,8 @@ class DialogueManager:
                 intencion=intencion,
                 evento="falta_lote"
             )
+            if self.session.anden is not None:
+                return f"Andén {self.session.anden} anotado. ¿Cuál es el número de lote que vas a auditar?"
             return "Entendido. ¿Cuál es el número de lote que vas a auditar?"
 
         if self.session.anden is None:

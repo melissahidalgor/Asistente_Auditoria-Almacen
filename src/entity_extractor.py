@@ -48,9 +48,15 @@ def extraer_entidades(mensaje: str) -> EntidadesAuditoria:
 def extraer_numero_aislado(mensaje: str) -> Optional[int]:
     """
     Extrae un valor numérico único cuando el usuario responde brevemente
-    a una solicitud de dato pendiente (ej. usuario escribe solo '3' o '710').
+    con SOLO un número (ej. '3' o '710'), sin palabras de entidad
+    como 'lote', 'batch', 'anden', 'bahia'.
     """
-    numeros = re.findall(r"\b\d+\b", mensaje.strip())
+    texto = normalizar(mensaje)
+    # Si contiene palabras explícitas de entidad, no es un número aislado
+    if re.search(r"\b(?:lote|batch|orden|anden|bahia|muelle|rampa)\b", texto):
+        return None
+
+    numeros = re.findall(r"\b\d+\b", texto)
     if len(numeros) == 1:
         return int(numeros[0])
     return None
