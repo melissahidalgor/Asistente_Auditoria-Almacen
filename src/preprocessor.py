@@ -30,19 +30,8 @@ def normalizar(texto: str) -> str:
     texto = unicodedata.normalize("NFD", texto.lower().strip())
     texto = "".join(c for c in texto if unicodedata.category(c) != "Mn")
     # Sustituye caracteres no alfanuméricos por espacios
-    texto = re.sub(r"[^a-z0-9\s]", " ", texto)
+    texto = re.sub(r"[^a-z0-9\s_-]", " ", texto)
     return re.sub(r"\s+", " ", texto).strip()
-
-
-def obtener_raiz(palabra: str) -> str:
-    """
-    Aplica normalización y reducción morfológica (stemming) a un término individual.
-    """
-    palabra_limpia = normalizar(palabra)
-    if not palabra_limpia:
-        return ""
-    return _STEMMER.stem(palabra_limpia)
-
 
 def tokenizar_y_stem(texto: str) -> List[str]:
     """

@@ -1,0 +1,258 @@
+{
+  "intents": [
+    {
+      "tag": "saludo",
+      "patterns": [
+        "Hola, buen día",
+        "Buenas tardes, quiero iniciar turno",
+        "Hola bot",
+        "Buenos días",
+        "Saludos",
+        "Hola asistente",
+        "Buenas tardes"
+      ],
+      "keywords": [
+        "hola",
+        "buenos",
+        "buenas",
+        "tardes",
+        "noches",
+        "saludos",
+        "turno"
+      ],
+      "frases_clave": [
+        "buen dia",
+        "iniciar turno"
+      ],
+      "responses": [
+        "Hola. Soy el Asistente de Auditoría de Almacén. Puedo ayudarte a registrar inspecciones de carga, consultar criterios de empaque y generar reportes de no-conformidad.",
+        "¡Saludos! Estoy aquí para asistirte en la auditoría de almacén. Puedes indicarme si deseas iniciar una inspección, reportar un empaque dañado o consultar los criterios de rechazo.",
+        "¡Hola! Soy tu asistente virtual para auditoría de almacén. Puedo ayudarte a auditar lotes, registrar daños de empaque y proporcionarte información sobre políticas de rechazo. ¿Cómo deseas proceder?"
+      ]
+    },
+    {
+      "tag": "iniciar_auditoria",
+      "patterns": [
+        "Voy a auditar el lote 504 en el andén 2",
+        "Iniciando recepción de mercancía",
+        "Revisando llegada de refacciones en bahía 3",
+        "Quiero comenzar una inspección",
+        "Registro de nueva carga arribada",
+        "Comenzar auditoría de empaques",
+        "Voy a auditar el lote 88 en el andén 9",
+        "Voy a auditar el lote 301 en el andén 5",
+        "Voy a auditar el lote 640",
+        "Voy a auditar el lote 77 en la bahía 1",
+        "Voy a auditar el lote 902 en el andén 1"
+      ],
+      "keywords": [
+        "auditar",
+        "auditoria",
+        "lote",
+        "anden",
+        "bahia",
+        "muelle",
+        "rampa",
+        "recepcion",
+        "revisando",
+        "iniciando",
+        "inicio",
+        "comenzar",
+        "inspeccion",
+        "arribo",
+        "descarga"
+      ],
+      "frases_clave": [
+        "llegada de",
+        "recepcion de",
+        "voy a auditar"
+      ],
+      "responses": [
+        "Entendido. He registrado el inicio de auditoría para el área indicada. Por favor, realiza la inspección física del paquete y describe si el empaque presenta golpes o si se encuentra intacto.",
+        "Auditoría iniciada. Por favor, procede a revisar el lote y confirma si los empaques están en buen estado o si presentan algún daño."
+      ]
+    },
+    {
+      "tag": "reportar_dano_empaque",
+      "patterns": [
+        "La caja viene rota de una esquina",
+        "El empaque llegó aplastado y rasgado",
+        "Hay cajas golpeadas en la tarima",
+        "Detecté perforaciones y esquinas colapsadas",
+        "El paquete tiene manchas de humedad y está mojado",
+        "Vienen cajas abiertas con cinta violada",
+        "Hay una caja perforada y con manchas de humedad",
+        "La caja está húmeda y el sello está violado"
+      ],
+      "keywords": [
+        "roto",
+        "rota",
+        "rotas",
+        "rotos",
+        "rotura",
+        "aplastado",
+        "aplastada",
+        "aplastadas",
+        "rasgado",
+        "rasgada",
+        "golpeado",
+        "golpeada",
+        "golpeadas",
+        "golpeados",
+        "golpes",
+        "dano",
+        "danado",
+        "danada",
+        "danadas",
+        "danos",
+        "perforado",
+        "perforada",
+        "perforacion",
+        "abollado",
+        "abollada",
+        "humedad",
+        "humeda",
+        "humedo",
+        "mojado",
+        "mojada",
+        "derrame",
+        "derramado",
+        "violado",
+        "violada",
+        "manchas",
+        "mancha",
+        "deformado",
+        "deformada"
+      ],
+      "frases_clave": [
+        "caja rota",
+        "sello violado",
+        "manchas de humedad"
+      ],
+      "responses": [
+        "Alerta de daño registrada. De acuerdo con el protocolo de calidad, no introduzcas el paquete al inventario general. Por favor, segrega el bulto en la zona de cuarentena y solicita la firma de rechazo al transportista."
+      ]
+    },
+    {
+      "tag": "confirmar_empaque_intacto",
+      "patterns": [
+        "Las cajas vienen en perfecto estado",
+        "Empaque cerrado, sin golpes y sellado",
+        "Lote conforme y sin daños",
+        "Todo en orden, empaques limpios e íntegros",
+        "No hay cajas dañadas, todo sellado",
+        "Revisión completa, mercancía en buen estado"
+      ],
+      "keywords": [
+        "perfecto",
+        "intacto",
+        "intactas",
+        "intactos",
+        "sellado",
+        "sellada",
+        "cerrado",
+        "cerrada",
+        "conforme",
+        "correcto",
+        "correctas",
+        "integro",
+        "limpio"
+      ],
+      "frases_clave": [
+        "sin danos",
+        "sin golpes",
+        "sin roturas",
+        "perfecto estado",
+        "buen estado",
+        "sin problemas"
+      ],
+      "responses": [
+        "Excelente. Inspección de empaque aprobada. El material ha sido validado para su liberación e ingreso al almacén general. Puedes proceder con la estiba."
+      ]
+    },
+    {
+      "tag": "consultar_politica_rechazo",
+      "patterns": [
+        "¿Cuáles son los motivos para rechazar una caja?",
+        "Criterios de daño de empaque",
+        "¿Cuándo debo mandar material a cuarentena?",
+        "Políticas de aceptación y rechazo",
+        "Normativa para rechazar material"
+      ],
+      "keywords": [
+        "criterio",
+        "criterios",
+        "motivos",
+        "rechazar",
+        "rechazo",
+        "politica",
+        "politicas",
+        "cuarentena",
+        "norma",
+        "normativa",
+        "lineamientos",
+        "reglas"
+      ],
+      "frases_clave": [
+        "criterios de",
+        "motivos para",
+        "cuando debo",
+        "mandar material a cuarentena"
+      ],
+      "responses": [
+        "Un empaque debe ser rechazado y enviado a cuarentena si presenta: 1) Rotura o perforación de cartón, 2) Deformación por aplastamiento, 3) Sellos violados, o 4) Manchas de humedad o derrame de líquidos."
+      ]
+    },
+    {
+      "tag": "despedida",
+      "patterns": [
+        "Muchas gracias, hasta luego",
+        "Es todo por el momento",
+        "Terminé mi turno, adiós",
+        "Gracias por la ayuda",
+        "Nos vemos, turno finalizado",
+        "Adiós bot",
+        "Gracias, hasta luego"
+      ],
+      "keywords": [
+        "gracias",
+        "adios",
+        "hasta",
+        "luego",
+        "terminar",
+        "termine",
+        "chao",
+        "bye"
+      ],
+      "frases_clave": [
+        "es todo",
+        "todo por el momento",
+        "hasta luego",
+        "termine mi turno"
+      ],
+      "responses": [
+        "Sesión de auditoría finalizada. Todos los eventos han sido guardados en la bitácora del sistema. ¡Buen turno de trabajo!",
+        "Gracias por utilizar el Asistente de Auditoría de Almacén. Recuerda que puedes iniciar otra auditoría en cualquier momento. ¡Hasta luego!"
+      ]
+    },
+    {
+      "tag": "fallback",
+      "patterns": [
+        "Quiero pedir comida",
+        "asdfghjkl",
+        "No sé qué hacer",
+        "Cuánto cuesta un boleto"
+      ],
+      "keywords": [],
+      "frases_clave": [],
+      "responses": [
+        "No he podido identificar tu solicitud en relación con la auditoría de almacén. Puedes indicarme si deseas: 1) Iniciar una inspección de lote, 2) Reportar un empaque dañado, o 3) Consultar los criterios de rechazo.",
+        "Lo siento, no reconozco esa operación. Por favor, dime si quieres iniciar una auditoría, reportar un daño de empaque o consultar las políticas de rechazo."
+      ]
+    }
+  ],
+  "entities_metadata": {
+    "ubicacion_prefijos": ["anden", "andén", "bahia", "bahía", "muelle", "zona", "rampa"],
+    "lote_prefijos": ["lote", "batch", "pedido", "orden"]
+  }
+}
