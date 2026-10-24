@@ -1,0 +1,11 @@
+# Cajas de caché de Python
+__pycache__/
+*.py[cod]
+
+# Logs y resultados locales
+logs/*.log
+*.csv
+*.png
+
+# Configuración del editor
+.vscode/
