@@ -1,0 +1,131 @@
+{
+  "descripcion": "Batería de pruebas funcionales (10 conversaciones oficiales) y pruebas de límites para la evaluación del Asistente de Auditoría de Almacén.",
+  "conversaciones": [
+    {
+      "id": "C1",
+      "nombre": "C1 Flujo completo conforme",
+      "turnos": [
+        { "usuario": "Hola, buen día", "intencion_esperada": "saludo" },
+        { "usuario": "Voy a auditar el lote 504 en el andén 2", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "Las cajas vienen en perfecto estado", "intencion_esperada": "confirmar_empaque_intacto" },
+        { "usuario": "Muchas gracias, hasta luego", "intencion_esperada": "despedida" }
+      ]
+    },
+    {
+      "id": "C2",
+      "nombre": "C2 Daño con datos incompletos",
+      "turnos": [
+        { "usuario": "Buenas tardes, quiero iniciar turno", "intencion_esperada": "saludo" },
+        { "usuario": "Revisando llegada de refacciones en bahía 3", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "lote 710", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "La caja viene rota de una esquina", "intencion_esperada": "reportar_dano_empaque" },
+        { "usuario": "Es todo por el momento", "intencion_esperada": "despedida" }
+      ]
+    },
+    {
+      "id": "C3",
+      "nombre": "C3 Consulta de políticas",
+      "turnos": [
+        { "usuario": "Hola bot", "intencion_esperada": "saludo" },
+        { "usuario": "¿Cuáles son los motivos para rechazar una caja?", "intencion_esperada": "consultar_politica_rechazo" },
+        { "usuario": "Criterios de daño de empaque", "intencion_esperada": "consultar_politica_rechazo" },
+        { "usuario": "Terminé mi turno, adiós", "intencion_esperada": "despedida" }
+      ]
+    },
+    {
+      "id": "C4",
+      "nombre": "C4 Actualización de andén y confirmación",
+      "turnos": [
+        { "usuario": "Voy a auditar el lote 88 en el andén 9", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "andén 4", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "Empaque cerrado, sin golpes y sellado", "intencion_esperada": "confirmar_empaque_intacto" },
+        { "usuario": "Terminé mi turno, adiós", "intencion_esperada": "despedida" }
+      ]
+    },
+    {
+      "id": "C5",
+      "nombre": "C5 Daño sin auditoría activa",
+      "turnos": [
+        { "usuario": "Hola", "intencion_esperada": "saludo" },
+        { "usuario": "El empaque llegó aplastado y rasgado", "intencion_esperada": "reportar_dano_empaque" },
+        { "usuario": "Hay cajas golpeadas en la tarima", "intencion_esperada": "reportar_dano_empaque" },
+        { "usuario": "Gracias, hasta luego", "intencion_esperada": "despedida" }
+      ]
+    },
+    {
+      "id": "C6",
+      "nombre": "C6 Mensajes fuera de dominio",
+      "turnos": [
+        { "usuario": "Quiero pedir comida", "intencion_esperada": "fallback" },
+        { "usuario": "No sé qué hacer", "intencion_esperada": "fallback" },
+        { "usuario": "asdfghjkl", "intencion_esperada": "fallback" },
+        { "usuario": "Voy a auditar el lote 301 en el andén 5", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "La caja está húmeda y el sello está violado", "intencion_esperada": "reportar_dano_empaque" },
+        { "usuario": "Es todo por el momento", "intencion_esperada": "despedida" }
+      ]
+    },
+    {
+      "id": "C7",
+      "nombre": "C7 Datos por separado",
+      "turnos": [
+        { "usuario": "Iniciando recepción de mercancía", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "lote 1020", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "andén 6", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "Lote conforme y sin daños", "intencion_esperada": "confirmar_empaque_intacto" }
+      ]
+    },
+    {
+      "id": "C8",
+      "nombre": "C8 Respuesta solo con número",
+      "turnos": [
+        { "usuario": "Voy a auditar el lote 640", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "3", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "Las cajas vienen en perfecto estado", "intencion_esperada": "confirmar_empaque_intacto" }
+      ]
+    },
+    {
+      "id": "C9",
+      "nombre": "C9 Política antes de auditar",
+      "turnos": [
+        { "usuario": "¿Cuándo debo mandar material a cuarentena?", "intencion_esperada": "consultar_politica_rechazo" },
+        { "usuario": "Voy a auditar el lote 77 en la bahía 1", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "Hay cajas golpeadas en la tarima", "intencion_esperada": "reportar_dano_empaque" },
+        { "usuario": "Terminé mi turno, adiós", "intencion_esperada": "despedida" }
+      ]
+    },
+    {
+      "id": "C10",
+      "nombre": "C10 Daño y consulta de criterios",
+      "turnos": [
+        { "usuario": "Hola bot", "intencion_esperada": "saludo" },
+        { "usuario": "Voy a auditar el lote 902 en el andén 1", "intencion_esperada": "iniciar_auditoria" },
+        { "usuario": "Hay una caja perforada y con manchas de humedad", "intencion_esperada": "reportar_dano_empaque" },
+        { "usuario": "¿Cuáles son los criterios de daño de empaque?", "intencion_esperada": "consultar_politica_rechazo" },
+        { "usuario": "Es todo por el momento", "intencion_esperada": "despedida" }
+      ]
+    }
+  ],
+  "pruebas_limite": [
+    {
+      "caso": "Errata en palabra clave",
+      "usuario": "la caja esta aplastda",
+      "intencion_esperada": "reportar_dano_empaque"
+    },
+    {
+      "caso": "Sinónimo fuera del diccionario",
+      "usuario": "la caja trae un hueco enorme",
+      "intencion_esperada": "reportar_dano_empaque"
+    },
+    {
+      "caso": "Sinónimo no contemplado",
+      "usuario": "el bulto viene en mal estado",
+      "intencion_esperada": "reportar_dano_empaque"
+    },
+    {
+      "caso": "Mensaje ambiguo",
+      "usuario": "hay una caja pero no sé si está bien",
+      "intencion_esperada": "fallback"
+    }
+  ]
+}
+
