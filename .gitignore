@@ -4,8 +4,10 @@ __pycache__/
 
 # Logs y resultados locales
 logs/*.log
-*.csv
 *.png
+*.jpg
 
 # Configuración del editor
 .vscode/
+
+bitacora*.json

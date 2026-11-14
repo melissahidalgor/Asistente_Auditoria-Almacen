@@ -11,6 +11,7 @@ import sys
 import os
 import json
 from pathlib import Path
+from typing import Optional
 import pandas as pd
 
 # Configurar encoding seguro para terminales Windows
@@ -23,7 +24,7 @@ if sys.platform == "win32":
 # Añadir raíz del proyecto al sys.path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from src.chatbot_engine import RuleBasedChatbot
+from src.chatbot_engine import RuleBasedChatbot, MLIntentClassifier, BaseIntentClassifier
 from src.auditoria_manager import AuditoriaSession
 from src.dialogue_manager import DialogueManager
 
@@ -41,7 +42,9 @@ def ejecutar_evaluacion(
     ruta_intents: str = "data/intents.json",
     ruta_test_json: str = "data/test_conversaciones.json",
     ruta_bitacora: str = "data/bitacora_pruebas.json",
-    verbose: bool = True
+    verbose: bool = True,
+    clasificador: Optional[BaseIntentClassifier] = None,
+    nombre_motor: str = "Reglas Simbólicas (Avance 1)"
 ) -> dict:
     """
     Ejecuta las conversaciones oficiales y pruebas de límites cargadas desde el JSON.
@@ -51,7 +54,7 @@ def ejecutar_evaluacion(
     conversaciones = datos_pruebas.get("conversaciones", [])
     pruebas_limite = datos_pruebas.get("pruebas_limite", [])
 
-    chatbot = RuleBasedChatbot(ruta_intents)
+    chatbot = clasificador or RuleBasedChatbot(ruta_intents)
     bitacora_total = []
 
     total_turnos = 0
@@ -64,6 +67,7 @@ def ejecutar_evaluacion(
     if verbose:
         print("\n" + "=" * 80)
         print(" BATERÍA DE PRUEBAS FUNCIONALES - ASISTENTE DE AUDITORÍA DE ALMACÉN")
+        print(f" Motor Evaluado: {nombre_motor}")
         print(" Dataset de evaluación cargado desde:", ruta_test_json)
         print("=" * 80)
 
@@ -181,4 +185,19 @@ def ejecutar_evaluacion(
 
 
 if __name__ == "__main__":
-    ejecutar_evaluacion()
+    import argparse
+    parser = argparse.ArgumentParser(description="Ejecutor de pruebas del Asistente de Auditoría")
+    parser.add_argument("--modo", choices=["reglas", "ml", "ambos"], default="ambos", help="Motor a evaluar ('reglas', 'ml' o 'ambos').")
+    args = parser.parse_args()
+
+    if args.modo in ("reglas", "ambos"):
+        print("\n" + "#" * 80)
+        print("  EVALUACIÓN 1: MOTOR DE REGLAS SIMBÓLICAS (AVANCE 1)")
+        print("#" * 80)
+        ejecutar_evaluacion(clasificador=RuleBasedChatbot("data/intents.json"), nombre_motor="Reglas Simbólicas (Avance 1)")
+
+    if args.modo in ("ml", "ambos"):
+        print("\n" + "#" * 80)
+        print("  EVALUACIÓN 2: MOTOR DE MACHINE LEARNING (AVANCE 2 - BoW + LinearSVC)")
+        print("#" * 80)
+        ejecutar_evaluacion(clasificador=MLIntentClassifier(), nombre_motor="Machine Learning BoW + LinearSVC (Avance 2)")
