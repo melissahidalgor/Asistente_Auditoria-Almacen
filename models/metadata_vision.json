@@ -1,0 +1,20 @@
+{
+  "modelo_ganador": "EfficientNetB0 (Transfer Learning)",
+  "img_size": [
+    224,
+    224
+  ],
+  "clases_originales": [
+    "damagedpackages",
+    "undamagedpackages"
+  ],
+  "etiquetas_espanol": [
+    "caja_danada",
+    "caja_intacta"
+  ],
+  "mapa_indices": {
+    "0": "caja_danada",
+    "1": "caja_intacta"
+  },
+  "umbral_binario": 0.5
+}
