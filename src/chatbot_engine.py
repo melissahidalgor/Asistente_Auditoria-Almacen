@@ -11,7 +11,8 @@ import json
 import os
 import random
 from typing import Dict, List, Optional, Any, Set
-from src.preprocessor import normalizar, tokenizar_y_stem
+import joblib
+from src.preprocessor import normalizar, preprocesar
 
 
 class ChatbotEngineError(Exception):
@@ -91,12 +92,12 @@ class RuleBasedChatbot(BaseIntentClassifier):
 
             # Raíces de palabras clave individuales
             palabras_stem: Set[str] = {
-                stem for kw in keywords for stem in tokenizar_y_stem(kw)
+                stem for kw in keywords for stem in preprocesar(kw)
             }
 
             # Secuencias de raíces para frases clave compuestas
             frases_stem: List[List[str]] = [
-                tokenizar_y_stem(frase) for frase in frases if frase.strip()
+                preprocesar(frase) for frase in frases if frase.strip()
             ]
 
             self._reglas[tag] = {
@@ -124,7 +125,7 @@ class RuleBasedChatbot(BaseIntentClassifier):
           - Frase clave compuesta: 3 puntos
         Retorna la etiqueta con mayor puntaje o 'fallback'.
         """
-        tokens_usuario = tokenizar_y_stem(mensaje)
+        tokens_usuario = preprocesar(mensaje)
         if not tokens_usuario:
             return "fallback"
 
@@ -158,3 +159,88 @@ class RuleBasedChatbot(BaseIntentClassifier):
         # Si la intención no existe, toma una respuesta al azar del fallback
         respuestas_fallback = self._respuestas.get("fallback", ["Operación no reconocida."])
         return random.choice(respuestas_fallback)
+
+
+class MLIntentClassifier(BaseIntentClassifier):
+    """
+    Clasificador de intenciones supervisado basado en Machine Learning (scikit-learn).
+    Utiliza el pipeline ganador (CountVectorizer BoW + LinearSVC) entrenado con
+    validación cruzada estratificada.
+    """
+
+    def __init__(
+        self,
+        model_filepath: str = "models/pipeline_intenciones.joblib",
+        intents_filepath: str = "data/intents.json",
+        umbral_decision: Optional[float] = None
+    ) -> None:
+        self._model_filepath: str = model_filepath
+        self._intents_filepath: str = intents_filepath
+        self._umbral_decision: Optional[float] = umbral_decision
+        self._pipeline: Any = None
+        self._respuestas: Dict[str, List[str]] = {}
+        self._cargar_recursos()
+
+    def _cargar_recursos(self) -> None:
+        """Carga el modelo serializado con joblib y el catálogo de respuestas."""
+        if not os.path.exists(self._model_filepath):
+            raise ChatbotEngineError(
+                f"[ERROR] Modelo entrenado no encontrado en '{self._model_filepath}'. "
+                "Ejecute 'entrenamiento_ml.ipynb' para generar el artefacto."
+            )
+        try:
+            self._pipeline = joblib.load(self._model_filepath)
+        except Exception as e:
+            raise ChatbotEngineError(
+                f"[ERROR] No se pudo deserializar el pipeline en '{self._model_filepath}': {e}"
+            ) from e
+
+        if not os.path.exists(self._intents_filepath):
+            raise ChatbotEngineError(
+                f"[ERROR] Catálogo de intenciones no encontrado en '{self._intents_filepath}'"
+            )
+        try:
+            with open(self._intents_filepath, mode="r", encoding="utf-8") as f:
+                datos = json.load(f)
+        except json.JSONDecodeError as e:
+            raise ChatbotEngineError(
+                f"[ERROR] Formato JSON inválido en '{self._intents_filepath}': {e}"
+            ) from e
+
+        for intent in datos.get("intents", []):
+            tag = intent.get("tag")
+            if tag:
+                self._respuestas[tag] = intent.get("responses", [])
+
+    def clasificar(self, mensaje: str) -> str:
+        """
+        Predice la intención del usuario a partir del texto ingresado.
+        Si el texto está vacío o la certeza del hiperplano no supera el umbral,
+        retorna 'fallback'.
+        """
+        if not mensaje or not mensaje.strip():
+            return "fallback"
+
+        # Si se configuró un umbral de margen para LinearSVC
+        if self._umbral_decision is not None and hasattr(self._pipeline, "decision_function"):
+            scores = self._pipeline.decision_function([mensaje])[0]
+            max_score = float(max(scores))
+            if max_score < self._umbral_decision:
+                return "fallback"
+
+        return str(self._pipeline.predict([mensaje])[0])
+
+    def obtener_intenciones(self) -> List[str]:
+        """Retorna las clases registradas en el estimador de scikit-learn."""
+        if hasattr(self._pipeline, "classes_"):
+            return list(self._pipeline.classes_)
+        return list(self._respuestas.keys())
+
+    def obtener_respuesta_base(self, intencion: str) -> str:
+        """Retorna una respuesta canónica al azar para la intención dada."""
+        respuestas = self._respuestas.get(intencion, [])
+        if respuestas:
+            return random.choice(respuestas)
+        fallback = self._respuestas.get("fallback", ["Operación no reconocida."])
+        return random.choice(fallback)
+

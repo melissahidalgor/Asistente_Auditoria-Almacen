@@ -25,6 +25,7 @@ class AuditoriaSession:
         self.dictamen: Optional[str] = None
         self.en_progreso: bool = False
         self.pendiente: Optional[str] = None  # Slot pendiente: "lote" o "anden"
+        self.inspeccion_pendiente: Optional[str] = None  # Estatus reportado antes de tener lote/andén
         self.bitacora: List[Dict[str, Any]] = []
 
     @property
@@ -93,6 +94,7 @@ class AuditoriaSession:
         self.dictamen = None
         self.en_progreso = False
         self.pendiente = None
+        self.inspeccion_pendiente = None
 
     def reset(self) -> None:
         """Limpia todo el estado de la sesión, incluyendo la bitácora en memoria."""
