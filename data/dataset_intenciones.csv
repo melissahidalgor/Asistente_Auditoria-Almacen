@@ -1,0 +1,366 @@
+texto,intencion
+Hola buen día,saludo
+Buenas tardes quiero iniciar turno,saludo
+Hola bot,saludo
+Buenos días,saludo
+Saludos,saludo
+Hola asistente,saludo
+Buenas tardes,saludo
+Buenas noches,saludo
+Qué tal buen día,saludo
+Hola qué tal,saludo
+Inicio de turno,saludo
+Empezando turno de recepción,saludo
+Hola asistente de auditoría,saludo
+Buen día a todos,saludo
+Hola servicio de auditoría,saludo
+Hola buenas tardes,saludo
+Buenos días sistema de almacén,saludo
+Hola iniciando labores en andén,saludo
+Saludos asistente,saludo
+Buen turno,saludo
+Hola asistente operativo,saludo
+Qué tal asistente virtual,saludo
+Hola bot de almacén,saludo
+Buenas noches equipo,saludo
+Buen día inspector presente,saludo
+Hola listo para auditar,saludo
+Hola buenos días a todos,saludo
+Buenas tardes llegando al andén,saludo
+Hola sistema de recepción,saludo
+Qué tal buen turno de trabajo,saludo
+Hola reporte de turno listo,saludo
+Buenas tardes asistente,saludo
+Hola aquí inspector de andén,saludo
+Hola comenzando jornada laboral,saludo
+Saludos cordiales,saludo
+Hola bot listo para revisar paquetes,saludo
+Buen día bot,saludo
+Hola por aquí iniciando recepción,saludo
+Buenas tardes qué tal todo,saludo
+Hola sistema operativo de calidad,saludo
+Buenos días iniciando revisión,saludo
+Hola qué tal cómo estás,saludo
+Saludos equipo de almacén,saludo
+Hola buen turno para todos,saludo
+Hola listo para comenzar auditoría,saludo
+Buenas tardes inspector listo,saludo
+Hola empezando turno de trabajo,saludo
+Buenos días asistente de calidad,saludo
+Hola bot de inspección,saludo
+Qué tal buen día asistente,saludo
+Voy a auditar el lote 504 en el andén 2,iniciar_auditoria
+Iniciando recepción de mercancía,iniciar_auditoria
+Revisando llegada de refacciones en bahía 3,iniciar_auditoria
+Quiero comenzar una inspección,iniciar_auditoria
+Registro de nueva carga arribada,iniciar_auditoria
+Comenzar auditoría de empaques,iniciar_auditoria
+Voy a auditar el lote 88 en el andén 9,iniciar_auditoria
+Voy a auditar el lote 301 en el andén 5,iniciar_auditoria
+Voy a auditar el lote 640,iniciar_auditoria
+Voy a auditar el lote 77 en la bahía 1,iniciar_auditoria
+Voy a auditar el lote 902 en el andén 1,iniciar_auditoria
+Revisando lote 1020 en andén 6,iniciar_auditoria
+Comenzando inspección del lote A-12 en rampa 4,iniciar_auditoria
+Llegó un embarque nuevo para revisar,iniciar_auditoria
+Iniciando auditoría de tarimas lote 402,iniciar_auditoria
+Auditoría de recepción en muelle 3,iniciar_auditoria
+Vamos a revisar el lote B-45 en bahía 2,iniciar_auditoria
+Tengo un camión descargando lote 710,iniciar_auditoria
+Empezar verificación de material en andén 1,iniciar_auditoria
+Registrar arribo de insumos lote 884,iniciar_auditoria
+Iniciando cotejo de mercancía en bahía 5,iniciar_auditoria
+Auditar descarga de refacciones lote 33,iniciar_auditoria
+Nueva carga arribando en rampa 2,iniciar_auditoria
+Revisar lote C-99 en muelle 6,iniciar_auditoria
+Voy a empezar a auditar el lote 150 en andén 3,iniciar_auditoria
+Comenzar inspección física de tarimas lote 612,iniciar_auditoria
+Revisión de paquetes arribados lote 220,iniciar_auditoria
+Iniciando proceso de recepción de flete,iniciar_auditoria
+Descargando lote 805 en bahía 4,iniciar_auditoria
+Recepción de mercancía lote 95 en andén 2,iniciar_auditoria
+Quiero registrar el inicio de una auditoría,iniciar_auditoria
+Iniciando revisión de empaques de refacciones,iniciar_auditoria
+Auditar arribo de cajas lote 550,iniciar_auditoria
+Verificando llegada de bultos en rampa 1,iniciar_auditoria
+Llegó lote 314 al andén 7,iniciar_auditoria
+Comenzando descarga en muelle 2 lote K-80,iniciar_auditoria
+Voy a auditar la mercancía que acaba de llegar,iniciar_auditoria
+Iniciando inspección en andén 4 lote 415,iniciar_auditoria
+Revisión de carga lote 770 en bahía 3,iniciar_auditoria
+Registro de entrada de material lote 108,iniciar_auditoria
+Iniciando auditoría de calidad de empaque,iniciar_auditoria
+Auditar bultos de insumos en bahía 1,iniciar_auditoria
+Recepción de carga nueva en andén 5,iniciar_auditoria
+Comenzando cotejo físico lote 920 en muelle 4,iniciar_auditoria
+Llegada de camión con lote 603 en rampa 3,iniciar_auditoria
+Registrar nuevo embarque de refacciones lote 512,iniciar_auditoria
+Voy a inspeccionar el lote 204 en bahía 6,iniciar_auditoria
+Iniciando verificación de lote 830,iniciar_auditoria
+Auditoría de entrada de mercancía en andén 3,iniciar_auditoria
+Empezando inspección de bultos lote 441,iniciar_auditoria
+La caja viene rota de una esquina,reportar_dano_empaque
+El empaque llegó aplastado y rasgado,reportar_dano_empaque
+Hay cajas golpeadas en la tarima,reportar_dano_empaque
+Detecté perforaciones y esquinas colapsadas,reportar_dano_empaque
+El paquete tiene manchas de humedad y está mojado,reportar_dano_empaque
+Vienen cajas abiertas con cinta violada,reportar_dano_empaque
+Hay una caja perforada y con manchas de humedad,reportar_dano_empaque
+La caja está húmeda y el sello está violado,reportar_dano_empaque
+Detecté rotura grave en el costado de la caja,reportar_dano_empaque
+El bulto viene completamente aplastado,reportar_dano_empaque
+Empaque desgarrado y con material expuesto,reportar_dano_empaque
+Las esquinas del cartón vienen colapsadas y vencidas,reportar_dano_empaque
+El paquete presenta derrame de líquido y humedad,reportar_dano_empaque
+La cinta de seguridad viene cortada y violada,reportar_dano_empaque
+Hay cajas perforadas por maniobra del montacargas,reportar_dano_empaque
+El cartón exterior viene abollado y sumido,reportar_dano_empaque
+Detecté sellos rotos y cajas entreabiertas,reportar_dano_empaque
+El paquete llegó quebrado y aplastado,reportar_dano_empaque
+La tarima trae varias cajas dañadas por aplastamiento,reportar_dano_empaque
+Cartón húmedo y aguado por lluvia,reportar_dano_empaque
+Se observan daños físicos severos en el empaque,reportar_dano_empaque
+Vienen bultos deshechos y cinta desprendida,reportar_dano_empaque
+La caja presenta un hueco y está golpeada,reportar_dano_empaque
+Empaque averiado durante el traslado,reportar_dano_empaque
+Roturas visibles en la superficie del cartón,reportar_dano_empaque
+El embalaje viene deformado y roto,reportar_dano_empaque
+El precinto de seguridad está roto y violado,reportar_dano_empaque
+Paquetes aplastados por mal estibado,reportar_dano_empaque
+La caja trae escurrimiento de líquidos y olor químico,reportar_dano_empaque
+Se identificaron rasgaduras grandes en la caja,reportar_dano_empaque
+El empaque viene perforado por un clavo de tarima,reportar_dano_empaque
+Bulto en mal estado con producto visible,reportar_dano_empaque
+Hay cajas sumidas y dobladas de la base,reportar_dano_empaque
+Caja rotulada con golpe fuerte en el frontal,reportar_dano_empaque
+La cinta viene despegada y la caja semiabierta,reportar_dano_empaque
+Empaques mojados con daño estructural evidente,reportar_dano_empaque
+Cajas aplastadas en la parte inferior de la estiba,reportar_dano_empaque
+Presenta perforación que atraviesa el cartón,reportar_dano_empaque
+Manchas de grasa y humedad en el empaque,reportar_dano_empaque
+El paquete viene destrozado de una cara lateral,reportar_dano_empaque
+Detecto daño físico evidente en la caja recibida,reportar_dano_empaque
+El sello de calidad del proveedor viene violado,reportar_dano_empaque
+Las cajas sufrieron aplastamiento en el transporte,reportar_dano_empaque
+Empaque con deformación severa y rotura de esquinas,reportar_dano_empaque
+Bulto colapsado sin resistencia de estiba,reportar_dano_empaque
+Caja rota con riesgo de daño al contenido,reportar_dano_empaque
+Cartón roto por fricción y rozamiento,reportar_dano_empaque
+Presenta evidencias de haber sido abierto y reencintado,reportar_dano_empaque
+El paquete viene aplastado y desfondado,reportar_dano_empaque
+Hay daño mecánico visible en los empaques,reportar_dano_empaque
+Las cajas vienen en perfecto estado,confirmar_empaque_intacto
+Empaque cerrado sin golpes y sellado,confirmar_empaque_intacto
+Lote conforme y sin daños,confirmar_empaque_intacto
+Todo en orden empaques limpios e íntegros,confirmar_empaque_intacto
+No hay cajas dañadas todo sellado,confirmar_empaque_intacto
+Revisión completa mercancía en buen estado,confirmar_empaque_intacto
+Empaques íntegros y precintos originales conformes,confirmar_empaque_intacto
+Las cajas vienen limpias y bien selladas,confirmar_empaque_intacto
+El material cumple con los requisitos de calidad,confirmar_empaque_intacto
+No se aprecian golpes ni roturas en los paquetes,confirmar_empaque_intacto
+Los empaques vienen en óptimas condiciones,confirmar_empaque_intacto
+Cajas perfectamente cerradas y sin aplastamiento,confirmar_empaque_intacto
+Todos los bultos están en excelente estado,confirmar_empaque_intacto
+La tarima está intacta y bien protegida,confirmar_empaque_intacto
+Empaque firme y cinta de seguridad íntegra,confirmar_empaque_intacto
+Sin anomalías visibles en el lote recibido,confirmar_empaque_intacto
+El lote viene en perfecto estado físico,confirmar_empaque_intacto
+Cajas conformes listas para ingresar a inventario,confirmar_empaque_intacto
+Sellos originales sin violación y empaques secos,confirmar_empaque_intacto
+Mercancía conforme para estiba general,confirmar_empaque_intacto
+Empaque en estado impecable sin deformaciones,confirmar_empaque_intacto
+Revisión de paquetes aprobada sin novedades,confirmar_empaque_intacto
+Cajas completas sin rasgaduras ni perforaciones,confirmar_empaque_intacto
+Todo el embarque llegó en excelente estado,confirmar_empaque_intacto
+Paquetes sellados y conformes con el estándar,confirmar_empaque_intacto
+La carga viene limpia seca y en buen estado,confirmar_empaque_intacto
+Inspección visual exitosa todo conforme,confirmar_empaque_intacto
+Empaques sólidos sin abolladuras en esquinas,confirmar_empaque_intacto
+Cajas intactas con etiquetas legibles y selladas,confirmar_empaque_intacto
+El flete llegó en perfectas condiciones de empaque,confirmar_empaque_intacto
+Material validado sin evidencias de maltrato,confirmar_empaque_intacto
+Los bultos vienen totalmente conformes,confirmar_empaque_intacto
+No hay presencia de humedad ni golpes,confirmar_empaque_intacto
+Empaque rígido y sin pérdida de resistencia,confirmar_empaque_intacto
+Las tarimas vienen conformes y con empaque íntegro,confirmar_empaque_intacto
+Sellado de fábrica intacto en todas las cajas,confirmar_empaque_intacto
+Revisión física aprobada mercancía conforme,confirmar_empaque_intacto
+Empaques secos limpios y bien estibados,confirmar_empaque_intacto
+Lote validado para liberación inmediata,confirmar_empaque_intacto
+Las cajas se encuentran en muy buenas condiciones,confirmar_empaque_intacto
+Empaques sin señales de impacto o compresión,confirmar_empaque_intacto
+Cajas herméticas y con sellos intactos,confirmar_empaque_intacto
+Lote sin observaciones físicas de daño,confirmar_empaque_intacto
+Mercancía en estado óptimo para almacenaje,confirmar_empaque_intacto
+Todo el producto viene conforme y protegido,confirmar_empaque_intacto
+Inspección de bultos conforme a política,confirmar_empaque_intacto
+El empaque cumple con todas las normas de calidad,confirmar_empaque_intacto
+Cajas en orden sin deformación estructural,confirmar_empaque_intacto
+Material recibido en estado conforme y sellado,confirmar_empaque_intacto
+Los paquetes están intactos y conformes,confirmar_empaque_intacto
+Cuáles son los motivos para rechazar una caja,consultar_politica_rechazo
+Criterios de daño de empaque,consultar_politica_rechazo
+Cuándo debo mandar material a cuarentena,consultar_politica_rechazo
+Políticas de aceptación y rechazo,consultar_politica_rechazo
+Normativa para rechazar material,consultar_politica_rechazo
+Qué lineamientos aplican para rechazar un lote,consultar_politica_rechazo
+Dime los motivos de envío a cuarentena,consultar_politica_rechazo
+Cuáles son los criterios de calidad de empaque,consultar_politica_rechazo
+Cuándo se considera que un paquete está no conforme,consultar_politica_rechazo
+Qué daños ameritan rechazo inmediato de carga,consultar_politica_rechazo
+Explícame las políticas de recepción en almacén,consultar_politica_rechazo
+Cuáles son las reglas para no aceptar una caja,consultar_politica_rechazo
+Cómo saber si una caja debe ir a cuarentena,consultar_politica_rechazo
+Qué tipos de daños físicos son causa de rechazo,consultar_politica_rechazo
+Criterios normativos para empaques con humedad,consultar_politica_rechazo
+Cuáles son las condiciones para rechazar el flete,consultar_politica_rechazo
+Por qué motivos se rechaza un embarque al transportista,consultar_politica_rechazo
+Qué hago si una caja tiene sellos violados,consultar_politica_rechazo
+Cuáles son las políticas de calidad para refacciones,consultar_politica_rechazo
+Normas de inspección para empaques dañados,consultar_politica_rechazo
+Cuándo procede el levantamiento de no conformidad,consultar_politica_rechazo
+Dime las reglas de rechazo de mercancía en andén,consultar_politica_rechazo
+Cuáles son los motivos por los que mandamos bultos a cuarentena,consultar_politica_rechazo
+Qué criterios definen una caja dañada,consultar_politica_rechazo
+Cuáles son los estándares de aceptación de embalaje,consultar_politica_rechazo
+En qué casos no debo recibir una tarima,consultar_politica_rechazo
+Explica la política corporativa de rechazo,consultar_politica_rechazo
+Qué nivel de perforación es motivo de rechazo,consultar_politica_rechazo
+Cuáles son los lineamientos para segregar material,consultar_politica_rechazo
+Qué dice el protocolo sobre cajas mojadas,consultar_politica_rechazo
+Criterios para rechazo por aplastamiento,consultar_politica_rechazo
+Cuáles son las razones para enviar un bulto a cuarentena,consultar_politica_rechazo
+Qué lineamiento sigo si el precinto viene alterado,consultar_politica_rechazo
+Dime los requisitos mínimos de empaque para aceptación,consultar_politica_rechazo
+Cuáles son las causas de no conformidad en recepción,consultar_politica_rechazo
+Política de rechazo para proveedores logísticos,consultar_politica_rechazo
+Qué procede cuando el cartón viene vencido o colapsado,consultar_politica_rechazo
+Cuáles son los 4 motivos de rechazo a cuarentena,consultar_politica_rechazo
+Explícame cuándo se rechaza un paquete,consultar_politica_rechazo
+Cuáles son las normas de rechazo vigentes,consultar_politica_rechazo
+Criterios de inspección visual de empaques,consultar_politica_rechazo
+Cuándo se debe firmar acta de rechazo al chofer,consultar_politica_rechazo
+Qué factores determinan el rechazo de una caja,consultar_politica_rechazo
+Dime las causales de cuarentena de producto,consultar_politica_rechazo
+Cuáles son las directrices de empaque conforme,consultar_politica_rechazo
+Qué política aplica si hay cinta sobrepuesta,consultar_politica_rechazo
+Condiciones bajo las cuales rechazo una entrega,consultar_politica_rechazo
+Cómo aplico los criterios de cuarentena,consultar_politica_rechazo
+Cuáles son las causales de rechazo de bultos,consultar_politica_rechazo
+Dime las políticas de inspección de calidad en descarga,consultar_politica_rechazo
+Muchas gracias hasta luego,despedida
+Es todo por el momento,despedida
+Terminé mi turno adiós,despedida
+Gracias por la ayuda,despedida
+Nos vemos turno finalizado,despedida
+Adiós bot,despedida
+Gracias hasta luego,despedida
+Hasta mañana asistente,despedida
+Fin de turno gracias,despedida
+Chao nos vemos,despedida
+Hasta pronto bot,despedida
+Ya terminé mis labores adiós,despedida
+Es todo por hoy muchas gracias,despedida
+Me retiro gracias por la asistencia,despedida
+Turno concluido hasta luego,despedida
+Nos vemos mañana bot,despedida
+Muchas gracias por el soporte,despedida
+Adiós asistente de almacén,despedida
+Terminamos la recepción por hoy adiós,despedida
+Todo listo por hoy gracias,despedida
+Hasta la próxima jornada,despedida
+Fin de sesión de auditoría,despedida
+Muchas gracias que tengas buen día,despedida
+Me desconecto hasta luego,despedida
+Cierre de turno muchas gracias,despedida
+Adiós y buen turno para todos,despedida
+Ya completé mis auditorías adiós,despedida
+Es todo de mi parte gracias,despedida
+Hasta luego bot de almacén,despedida
+Nos vemos en el próximo turno,despedida
+Gracias por la información adiós,despedida
+Con esto termino mi jornada gracias,despedida
+Terminé con las revisiones hasta luego,despedida
+Buen descanso hasta mañana,despedida
+Adiós sistema cerramos sesión,despedida
+Muchas gracias por todo hasta pronto,despedida
+Hasta luego asistente operativo,despedida
+Listo mi turno nos vemos,despedida
+Gracias bot buen día,despedida
+Finalizando sesión de trabajo adiós,despedida
+Hasta mañana equipo de almacén,despedida
+Es todo por ahora gracias,despedida
+Terminé de auditar por hoy nos vemos,despedida
+Adiós gracias por registrar los datos,despedida
+Turno cerrado hasta la próxima,despedida
+Muchas gracias concluimos por hoy,despedida
+Nos vemos asistente buen turno,despedida
+Terminé mi guardia adiós,despedida
+Todo registrado hasta luego,despedida
+Gracias nos vemos en la siguiente entrega,despedida
+Quiero pedir comida,fallback
+asdfghjkl,fallback
+No sé qué hacer,fallback
+Cuánto cuesta un boleto de cine,fallback
+Qué hora tienes,fallback
+Cuál es el clima de hoy,fallback
+Recomiéndame una película,fallback
+Cómo te llamas bot,fallback
+Quiero jugar un videojuego,fallback
+Prueba de sonido uno dos tres,fallback
+qwertyuiop,fallback
+Cuéntame un chiste,fallback
+Quién ganó el partido de fútbol,fallback
+Dónde queda la cafetería más cercana,fallback
+Tienes hambre bot,fallback
+Cuál es la raíz cuadrada de dieciséis,fallback
+Cuánto es dos más dos,fallback
+Quiero escuchar música,fallback
+Me gusta la pizza de pepperoni,fallback
+zzzzzzzz,fallback
+Qué opinas de la inteligencia artificial,fallback
+Cuál es la capital de Francia,fallback
+Puedes escribir un poema,fallback
+Dónde dejé mis llaves,fallback
+Cuál es el sentido de la vida,fallback
+Quiero comprar unos zapatos,fallback
+Qué día es hoy,fallback
+Ayuda no entiendo nada,fallback
+123456789,fallback
+Hola quién es tu creador,fallback
+Podemos hablar de otra cosa,fallback
+Qué música recomiendas,fallback
+Tengo sueño,fallback
+Vamos a cantar una canción,fallback
+Cuántos años tienes asistente,fallback
+Me puedes contar una historia,fallback
+xxxxxxxxx,fallback
+Cuál es tu color favorito,fallback
+Cómo se hace un pastel de chocolate,fallback
+Quiero pedir vacaciones,fallback
+Dime el pronóstico del tiempo mañana,fallback
+Me prestas dinero bot,fallback
+Qué estás pensando,fallback
+Oye siri oye alexa,fallback
+No tengo idea de qué poner,fallback
+Blablabla bla bla,fallback
+Cuánto dura un partido de tenis,fallback
+Puedes pedir un taxi por mí,fallback
+El cielo está muy azul hoy,fallback
+Cualquier cosa fuera de contexto,fallback
+Sin rasgaduras ni perforaciones en el cartón,confirmar_empaque_intacto
+Cajas sin perforaciones y cinta de seguridad íntegra,confirmar_empaque_intacto
+Lote validado y conforme para liberación al almacén,confirmar_empaque_intacto
+Empaque íntegro sin evidencias de roturas ni rasgado,confirmar_empaque_intacto
+Empaque roto con contenido expuesto y desgarrado,reportar_dano_empaque
+Cartón desgarrado con piezas visibles y rotas,reportar_dano_empaque
+Cuáles son las normas de inspección y motivos de no conforme,consultar_politica_rechazo
+En qué casos se rechaza una tarima y va a cuarentena,consultar_politica_rechazo
+Cuándo procede declarar no conforme un paquete,consultar_politica_rechazo
+Iniciando proceso de recepción de flete en andén,iniciar_auditoria
+Mal estado,reportar_dano_empaque
+Está en mal estado,reportar_dano_empaque
+El empaque está en mal estado,reportar_dano_empaque
+Viene en pésimo estado,reportar_dano_empaque
+Llegó en muy mal estado,reportar_dano_empaque
